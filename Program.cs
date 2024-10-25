@@ -40,7 +40,7 @@ namespace EffectiveMobileTestTask
 
                 var target = new FileTarget();
                 target.FileName = configurations.DeliveryLog;
-                target.Layout = "${date:format=yy-MM-dd HH\\:MM\\:ss} ${logger} ${message}";
+                target.Layout = "${date:format=yy-MM-dd HH\\:mm\\:ss} ${logger} ${message}";
                 NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(target, LogLevel.Debug);
                 Logger errorLogger = LogManager.GetLogger("ERROR");
                 Logger infoLogger = LogManager.GetLogger("Info");
